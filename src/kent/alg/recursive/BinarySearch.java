@@ -1,5 +1,11 @@
 package kent.alg.recursive;
 
+/**
+ * time complexity : O(log(n))
+ * 
+ * @author kentfan
+ *
+ */
 public class BinarySearch {
 	
 	int[] array;
