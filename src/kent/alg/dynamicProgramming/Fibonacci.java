@@ -1,9 +1,37 @@
 package kent.alg.dynamicProgramming;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Fibonacci {
 	
+	private Map<Integer, Integer> memorizetTable;
+	 
+	public Fibonacci() {
+		this.memorizetTable = new HashMap<>();
+		memorizetTable.put(0, 0);
+		memorizetTable.put(1, 1);
+		
+	}
+	
+	// O(n)
+	public int fibonacciDP(int n) {
+		
+		// O(1)
+		if(memorizetTable.containsKey(n))
+			return memorizetTable.get(n);
+		
+		memorizetTable.put(n-1, fibonacciDP(n-1));
+		memorizetTable.put(n-2, fibonacciDP(n-2));
+		
+		int resultNumner = memorizetTable.get(n-1) + memorizetTable.get(n-2);
+		memorizetTable.put(n, resultNumner);
+		
+		return resultNumner;
+	}
+	
 	// this has exponential running time.
-	public static int naiveFiboncci(int n) {
+	public int naiveFiboncci(int n) {
 		if(n == 0) return 0;
 		else if (n == 1) return 1;
 		
@@ -13,7 +41,11 @@ public class Fibonacci {
 	
 
 	public static void main(String[] args) {
-		System.out.println(naiveFiboncci(4));
+		int parameter = 8;
+		
+		Fibonacci f = new Fibonacci();
+		System.out.println("naiveFiboncci: " + f.naiveFiboncci(parameter));
+		System.out.println("FiboncciDP: " + f.fibonacciDP(parameter));
 
 	}
 
