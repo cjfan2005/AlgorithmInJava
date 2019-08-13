@@ -13,10 +13,10 @@ package kent.alg.leetcode;
 public class AddTwoNumbers {
 	class ListNode{
 	    int val;
-	    ListNode nextNode;
+	    ListNode next;
 	    ListNode(int val){
 	        this.val=val;
-	        this.nextNode=null;
+	        this.next=null;
 	    }
 	}
 	
@@ -30,22 +30,22 @@ public class AddTwoNumbers {
 		while(p1 != null && p2 != null) {
 			if(p1 != null) {
 				sum += p1.val;
-				p1 = p1.nextNode;
+				p1 = p1.next;
 			}
 			if(p2 != null) {
 				sum += p2.val;
-				p1 = p2.nextNode;
+				p1 = p2.next;
 			}
-			cur.nextNode = new ListNode(sum%10);
+			cur.next = new ListNode(sum%10);
 			sum /= 10;
-			cur = cur.nextNode;
+			cur = cur.next;
 		}
 		
 		if(sum == 1) {
-			cur.nextNode = new ListNode(1);
+			cur.next = new ListNode(1);
 			
 		}
-		return dummy.nextNode;
+		return dummy.next;
 	}
 
 	public static void main(String[] args) {
