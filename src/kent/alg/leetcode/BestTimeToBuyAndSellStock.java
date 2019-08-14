@@ -38,7 +38,7 @@ public class BestTimeToBuyAndSellStock {
         return maxProfit;
     }
 	
-	// Time complexity : O(n)O(n)O(n). Only a single pass is needed.
+	// Time complexity : O(n). Only a single pass is needed.
 	public int naxProfit_2(int[] prices) {
 		int minPrice = Integer.MAX_VALUE;
 		int maxProfit = 0;
