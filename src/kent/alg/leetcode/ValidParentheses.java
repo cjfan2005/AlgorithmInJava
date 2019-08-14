@@ -11,6 +11,8 @@ An input string is valid if:
     Open brackets must be closed in the correct order.
 
 Note that an empty string is also considered valid.
+
+cases: (){}[] , ([)] , }
  */
 
 // 'Stack' to solve ! push/pop
