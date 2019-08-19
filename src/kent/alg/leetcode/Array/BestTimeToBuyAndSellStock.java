@@ -1,4 +1,4 @@
-package kent.alg.leetcode;
+package kent.alg.leetcode.Array;
 /*
 Say you have an array for which the i-th element is the price of a given stock on day i.
 
@@ -39,7 +39,7 @@ public class BestTimeToBuyAndSellStock {
     }
 	
 	// Time complexity : O(n). Only a single pass is needed.
-	public int naxProfit_2(int[] prices) {
+	public int maxProfit_2(int[] prices) {
 		int minPrice = Integer.MAX_VALUE;
 		int maxProfit = 0;
 		
