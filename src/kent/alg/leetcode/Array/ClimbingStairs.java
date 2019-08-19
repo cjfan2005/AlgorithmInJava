@@ -1,4 +1,4 @@
-package kent.alg.leetcode;
+package kent.alg.leetcode.Array;
 /**
 You are climbing a stair case. It takes n steps to reach to the top.
 
