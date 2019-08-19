@@ -1,4 +1,4 @@
-package kent.alg.leetcode;
+package kent.alg.leetcode.Stack;
 
 import java.util.Stack;
 
