@@ -1,4 +1,4 @@
-package kent.alg.leetcode;
+package kent.alg.leetcode.Array;
 
 import java.util.HashMap;
 
@@ -30,7 +30,7 @@ public class TwoSum {
 				result[1] = i;
 				break;
 			}
-			map.put(nums[i], i);
+			map.put(nums[i], i); //算過的值，都放到map。
 		}
 		
 		return result;
@@ -39,6 +39,7 @@ public class TwoSum {
 	public static void main(String[] args) {
 		int[] nums = {2, 7, 11, 15};
 		int target = 18;
-        System.out.println(twoSum(nums, target));
+        System.out.println(twoSum(nums, target)[0] + "," + twoSum(nums, target)[1]);
+        
 	}
 }
