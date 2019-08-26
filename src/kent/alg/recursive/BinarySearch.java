@@ -8,17 +8,7 @@ package kent.alg.recursive;
  */
 public class BinarySearch {
 	
-	int[] array;
-	
-	public BinarySearch(int[] array) {
-		this.array = array;
-	}
-	
-	public int binarySearch(int item) {
-		return binarySearch(0, array.length, item);
-	}
-	
-	public int binarySearch(int startIndex, int endIndex, int item) {
+	public int binarySearch(int[] array, int startIndex, int endIndex, int item) {
 		 
 		if(endIndex < startIndex) {
 			System.out.println("The item is not present in the array.");
@@ -31,11 +21,21 @@ public class BinarySearch {
 			return middleIndex;
 		
 		else if(item < array[middleIndex])
-			return binarySearch(startIndex, middleIndex-1, item);
+			return binarySearch(array, startIndex, middleIndex-1, item);
 		
 		else
-			return binarySearch(middleIndex+1, endIndex, item);
+			return binarySearch(array, middleIndex+1, endIndex, item);
 		
+		
+	}
+	
+	public static void main(String[] args) {
+		BinarySearch bs = new BinarySearch();
+		int arr[] = { 2, 3, 4, 10, 40 }; 
+        int n = arr.length; 
+        int x = 10; 
+        
+        System.out.println(bs.binarySearch(arr, 0, n-1, x));
 		
 	}
 
