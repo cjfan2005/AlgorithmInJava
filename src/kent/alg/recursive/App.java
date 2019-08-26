@@ -1,5 +1,7 @@
 package kent.alg.recursive;
 
+import kent.alg.search.LinearSearch;
+
 public class App {
 
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package kent.alg.recursive;
+package kent.alg.search;
 
 
 /*
