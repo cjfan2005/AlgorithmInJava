@@ -16,8 +16,6 @@ public class App {
 		int[] array = {15,2,3,7,10,5,9,8,14,22};
 		LinearSearch ls = new LinearSearch(array);
 		System.out.println(ls.linearSerch(22));
-		BinarySearch bs = new BinarySearch(array);
-		System.err.println(bs.binarySearch(22));
 		
 	}
 }
