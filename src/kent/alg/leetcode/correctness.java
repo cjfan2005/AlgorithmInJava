@@ -66,7 +66,6 @@ public class correctness {
 			
 			return "REMOVE " + ch;
 		}
-		
 		return "IMPOSSIBLE";
 		
 		
